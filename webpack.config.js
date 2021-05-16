@@ -8,13 +8,15 @@ module.exports = {
   entry: './index.tsx',
   output: {
     filename: '[hash].main.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.ts', '.json', '.tsx', '.jsx']
   },
   devServer: {
-    port: 5555
+    port: 5555,
+    historyApiFallback: true,
   },
   plugins: [
     new HTMLWebpackPlugin({

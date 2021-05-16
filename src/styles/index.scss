@@ -1,0 +1,43 @@
+@import url(./_material.scss);
+@import url(./_general.scss);
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  &-sidebar {
+    display: none;
+    width: 220px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  &-page {
+    padding: 10px;
+    flex: 1;
+  }
+}
+
+.MuiAppBar-root {
+  height: 56px !important;
+  @media (min-width: 516px) {
+    height: 48px !important;
+  }
+  @media (min-width: 600px) {
+    height: 64px !important;
+  }
+}
